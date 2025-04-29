@@ -1,3 +1,30 @@
-<h1>Alumnos</h1>
+<h2>Alumnos aceptados para el ingreso a Hogwarts</h2>
 
-<app-alumnos-table />
+<form [formGroup]="alumnoForm" (ngSubmit)="onSubmit()" class="w-50">
+  <div class="row">
+    <div class="col-6">
+      <mat-form-field class="w-100">
+        <mat-label>Nombre y Apellido</mat-label>
+        <input formControlName="nombre" matInput />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-6">
+      <mat-form-field class="w-100">
+        <mat-label>E-Mail</mat-label>
+        <input formControlName="mail" matInput />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="col-12 d-flex mt-3">
+    <button type="submit" mat-raised-button>
+      Guardar Datos
+    </button>
+  </div>
+</form>
+
+<app-alumnos-table
+(editAlumno)="onEditAlumno($event)"
+(deleteAlumno)="onDeleteAlumno($event)"
+[dataSource]="alumnos"/>
