@@ -25,6 +25,6 @@
 </form>
 
 <app-alumnos-table
-(editAlumno)="onEditAlumno($event)"
+(editAlumno)="onEditAlumno($event.orden)"
 (deleteAlumno)="onDeleteAlumno($event)"
 [dataSource]="alumnos"/>
