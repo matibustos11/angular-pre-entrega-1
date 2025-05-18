@@ -11,12 +11,14 @@ import {MatIconModule} from '@angular/material/icon';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import {MatListModule} from '@angular/material/list';
 import { AlumnosModule } from './modules/alumnos/alumnos.module';
+import { ClasesComponent } from './modules/clases/clases.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    ClasesComponent
   ],
   imports: [
     CommonModule,
