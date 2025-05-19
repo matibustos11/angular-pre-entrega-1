@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { AlumnosDetailComponent } from './pages/alumnos-detail/alumnos-detail.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -28,7 +29,8 @@ import { AlumnosDetailComponent } from './pages/alumnos-detail/alumnos-detail.co
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   exports: [AlumnosComponent]
 })

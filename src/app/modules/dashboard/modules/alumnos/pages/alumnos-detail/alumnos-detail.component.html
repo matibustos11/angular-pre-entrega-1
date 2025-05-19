@@ -1,7 +1,47 @@
 @if (!(alumno$ | async)) {
   <p>Alumno no encontrado</p>
 } @else {
-  <h1>
-    {{ (alumno$ | async)?.nombre }}
-  </h1>
+  <div class="container mt-4">
+  <!-- Título -->
+  <h1 class="text-center mb-4">Detalle del Alumno</h1>
+
+  <mat-card class="w-50 mx-auto">
+    <mat-card-header class="bg-primary text-white">
+      <mat-card-title>Información del Alumno</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="p-4">
+      <div class="row mb-3">
+        <div class="col-12">
+          <mat-label class="font-weight-bold">Número de Orden:</mat-label>
+          <p class="mt-1">{{ (alumno$ | async)?.orden || 'No asignado' }}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-12">
+          <mat-label class="font-weight-bold">Nombre:</mat-label>
+          <p class="mt-1">{{ (alumno$ | async)?.nombre || 'No registrado' }}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-12">
+          <mat-label class="font-weight-bold">Email:</mat-label>
+          <p class="mt-1">{{ (alumno$ | async)?.mail || 'No registrado' }}</p>
+        </div>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions class="d-flex justify-content-end p-3">
+      <button
+        mat-raised-button
+        color="primary"
+        routerLink="/dashboard/alumnos"
+      >
+        Volver al listado
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
 }
