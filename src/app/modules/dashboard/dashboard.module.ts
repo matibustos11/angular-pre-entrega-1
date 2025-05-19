@@ -14,11 +14,12 @@ import { AlumnosModule } from './modules/alumnos/alumnos.module';
 import { ClasesComponent } from './modules/clases/clases.component';
 
 
+
 @NgModule({
   declarations: [
     DashboardComponent,
     NavMenuComponent,
-    ClasesComponent
+    ClasesComponent,
   ],
   imports: [
     CommonModule,

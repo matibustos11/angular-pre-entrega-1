@@ -10,13 +10,15 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { AlumnosDetailComponent } from './pages/alumnos-detail/alumnos-detail.component';
 
 
 
 @NgModule({
   declarations: [
     AlumnosComponent,
-    AlumnosTableComponent
+    AlumnosTableComponent,
+    AlumnosDetailComponent
   ],
   imports: [
     CommonModule,

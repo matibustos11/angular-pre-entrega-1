@@ -1,0 +1,7 @@
+@if (!(alumno$ | async)) {
+  <p>Alumno no encontrado</p>
+} @else {
+  <h1>
+    {{ (alumno$ | async)?.nombre }}
+  </h1>
+}

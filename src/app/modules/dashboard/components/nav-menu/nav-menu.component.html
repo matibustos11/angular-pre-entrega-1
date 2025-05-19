@@ -1,6 +1,6 @@
 <mat-nav-list>
   <a mat-list-item routerLink="/dashboard">Inicio</a>
-  <a mat-list-item routerLink="/dashboard/alumnos">Alumnos</a>
-  <a mat-list-item routerLink="/dashboard/clases">Clases</a>
-  <a mat-list-item routerLink="/auth">Cerrar Sesión</a>
+  <a mat-list-item routerLink="alumnos">Alumnos</a>
+  <a mat-list-item routerLink="clases">Clases</a>
+  <a mat-list-item (click)="logout()">Cerrar Sesión</a>
 </mat-nav-list>
